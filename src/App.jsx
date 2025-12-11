@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <h1>Welcome to HerboDent AI Assistent</h1>
+      <h2>where Dental care meets AI </h2>
+      <h2>Please select your symptoms...</h2>
+      <div className="options">
+      <div className="symptoms" id='1'>Toothache</div>
+      <div className="symptoms" id='2'>Spots</div>
+      <div className="symptoms" id='3'>Bad breath</div>
+      <div className="symptoms" id='4'>Bleeding Gums</div>
+      <div className="symptoms" id='5'>Swollen gums</div>
+      <div className="symptoms" id='6'>Cold sensitivity</div>
+      <div className="symptoms" id='7'>Hot sensitivity</div>
+      <div className="symptoms" id='8'>Sharp pain</div>
+      <div className="symptoms" id='9'>Yellow teeth</div>
+      <div className="symptoms" id='10'>Stains</div>
+      <div className="symptoms" id='11'>Discomfort</div>
+      <div className="symptoms" id='12'>Dry mouth</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <button className="btn">Submit</button>
+    </div>
     </>
   )
 }
