@@ -9,7 +9,7 @@ function App() {
         </div>
         <img
           id="herbal-pic"
-          src="/herbal.jpeg"
+          src="/img/herbal.jpeg"
           alt="Herbal Toothpaste"
         />
         <div className="body">
@@ -19,7 +19,7 @@ function App() {
           <div className="options">
             <div className="symptoms" id="1">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="./img/toothache.png" alt="" />
+              <img id="toothache" src="/img/toothache.png" alt="" />
               Toothache
             </div>
             <div className="symptoms" id="2">
