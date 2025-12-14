@@ -24,57 +24,57 @@ function App() {
             </div>
             <div className="symptoms" id="2">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="spots" src="a/img/spots.png" alt="" />
+              <img id="spots" src="/img/spots.png" alt="" />
               Spots
             </div>
             <div className="symptoms" id="3">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="img/bad-breath.jpeg" alt="" />
+              <img id="toothache" src="/img/bad-breath.jpeg" alt="" />
               Bad breath
             </div>
             <div className="symptoms" id="4">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/bleeding-gum.jpeg" alt="" />
+              <img id="toothache" src="/img/bleeding-gum.jpeg" alt="" />
               Bleeding Gums
             </div>
             <div className="symptoms" id="5">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/swollen-gum.jpeg" alt="" />
+              <img id="toothache" src="/img/swollen-gum.jpeg" alt="" />
               Swollen gums
             </div>
             <div className="symptoms" id="6">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/cold-sensitive.jpeg" alt="" />
+              <img id="toothache" src="/img/cold-sensitive.jpeg" alt="" />
               Cold sensitivity
             </div>
             <div className="symptoms" id="7">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/hot-sensitive.png" alt="" />
+              <img id="toothache" src="/img/hot-sensitive.png" alt="" />
               Hot sensitivity
             </div>
             <div className="symptoms" id="8">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/sharp-pain.jpeg" alt="" />
+              <img id="toothache" src="/img/sharp-pain.jpeg" alt="" />
               Sharp pain
             </div>
             <div className="symptoms" id="9">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/yellow-teeth.png" alt="" />
+              <img id="toothache" src="/img/yellow-teeth.png" alt="" />
               Yellow teeth
             </div>
             <div className="symptoms" id="10">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/stain.jpeg" alt="" />
+              <img id="toothache" src="/img/stain.jpeg" alt="" />
               Stains
             </div>
             <div className="symptoms" id="11">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/discomfort.png" alt="" />
+              <img id="toothache" src="/img/discomfort.png" alt="" />
               Discomfort
             </div>
             <div className="symptoms" id="12">
               <div className="checkmark"><span class="material-symbols-outlined">check_small</span></div>
-              <img id="toothache" src="assets/img/dry-mouth.jpeg" alt="" />
+              <img id="toothache" src="/img/dry-mouth.jpeg" alt="" />
               Dry mouth
             </div>
           </div>
