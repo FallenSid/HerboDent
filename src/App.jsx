@@ -9,7 +9,7 @@ function App() {
         </div>
         <img
           id="herbal-pic"
-          src="./public/src/assets/img/herbal.jpeg"
+          src="/herbal.jpeg"
           alt="Herbal Toothpaste"
         />
         <div className="body">
