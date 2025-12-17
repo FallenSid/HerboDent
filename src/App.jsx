@@ -40,7 +40,7 @@ function App() {
       }
       else if (n === 11 || n === 12) {
         d++;
-      } else {console.log("gadhe ho tum");}
+      }
     }
 
     const max_score = Math.max(a, b, c, d);
@@ -62,19 +62,23 @@ function App() {
     else if (max_score === d) {
       alert("you should try varient D the All Rounder");
     }
-    alert("Analyzing your symptoms: " + [a, b, c, d]);
   }
   return (
     <>
       <div className="container">
         <div className="header">
-          <h1>HerboDent</h1>
+        <img id="herbal-pic" src="/img/herbodent.png" alt="Herbal Toothpaste" />
+        <div className="title">Personalized Dental Care Using AI</div>
         </div>
-        <img id="herbal-pic" src="/img/herbal.jpeg" alt="Herbal Toothpaste" />
         <div className="body">
-          <h2>Welcome to Herbodent Where Dentalcare Meets AI.</h2>
-
-          <h2>Please select your symptoms...</h2>
+        <div className="intro">
+          <h2>Welcome to HerboDent 👋 </h2>
+          <p>Where Herbal Care Meets Artificial Intelligence</p>
+        </div>
+        <div className="direction">
+          <h3>Please select your symptoms</h3>
+          <p>Multiple selections are allowed</p>
+        </div>
           <div className="options">
             <div className="symptoms" id="1" onClick={selected}>
               <img id="toothache" src="/img/toothache.png" alt="" />
@@ -126,8 +130,14 @@ function App() {
             </div>
           </div>
           <button className="btn" onClick={Think}>
-            Submit
+            <img id="search" src="/img/search.svg" alt="" />
+            <p>Get my Recommendation</p>
           </button>
+          <p className="text">no personal data is stored</p>
+
+          <div className="footer">
+            Made by FallendSid
+          </div>
         </div>
       </div>
     </>
