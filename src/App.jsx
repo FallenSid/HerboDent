@@ -140,6 +140,108 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div id="varient-4" className="popup">
+        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name"><h3>All-Rounder Herbal Toothpaste</h3></div>
+          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
+          <div className="grids">
+            <div>Protection</div>
+            <div>Herbal care</div>
+            <div>Sensivitity Relief</div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+
+            <div>Use twice daily</div>
+            <div>Brush for 2 minutes</div>
+            <div>Suitable for daily use</div>
+            </div>
+          </div>
+          <div className="popup-btn">
+            <div className="btn">Try Again</div>
+          </div>
+        </div>
+      </div>
+      <div id="varient-1" className="popup">
+        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name"><h3>Cavity / Tooth decay treatment</h3></div>
+          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
+          <div className="grids">
+            <div>Protection</div>
+            <div>Herbal care</div>
+            <div>Sensivitity Relief</div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+
+            <div>Use twice daily</div>
+            <div>Brush for 2 minutes</div>
+            <div>Suitable for daily use</div>
+            </div>
+          </div>
+          <div className="popup-btn">
+            <div className="btn">Try Again</div>
+          </div>
+        </div>
+      </div>
+      <div id="varient-2" className="popup">
+        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name"><h3>Gum problem toothpaste</h3></div>
+          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
+          <div className="grids">
+            <div>Protection</div>
+            <div>Herbal care</div>
+            <div>Sensivitity Relief</div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+
+            <div>Use twice daily</div>
+            <div>Brush for 2 minutes</div>
+            <div>Suitable for daily use</div>
+            </div>
+          </div>
+          <div className="popup-btn">
+            <div className="btn">Try Again</div>
+          </div>
+        </div>
+      </div>
+      <div id="varient-3" className="popup">
+        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name"><h3>Sensitivity and whitening</h3></div>
+          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
+          <div className="grids">
+            <div>Protection</div>
+            <div>Herbal care</div>
+            <div>Sensivitity Relief</div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+
+            <div>Use twice daily</div>
+            <div>Brush for 2 minutes</div>
+            <div>Suitable for daily use</div>
+            </div>
+          </div>
+          <div className="popup-btn">
+            <div className="btn">Try Again</div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }
