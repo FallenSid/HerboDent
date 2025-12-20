@@ -19,12 +19,8 @@ function App() {
   }
 
   function deSelect(){
-    // const selectedDiv = document.getElementsByClassName('selected');
-    // for(const div of selectedDiv){
-    //   div.classList.remove("selected")
-    // }
-
     document.querySelectorAll('.selected').forEach(div => div.classList.remove('selected'));
+    symptoms.length = 0;
 
   }
 
@@ -70,9 +66,8 @@ function App() {
         d++;
       }
     }
-
+    console.log(a,b,c,d)
     const max_score = Math.max(a, b, c, d);
-
     const count = [a, b, c, d].filter((score) => score === max_score).length;
 
     if (count > 1) {
@@ -86,6 +81,8 @@ function App() {
     } else if (max_score === d) {
       popup4();
     }
+    console.log(a,b,c,d)
+    console.log(symptoms)
   }
 
 
