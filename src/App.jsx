@@ -2,11 +2,15 @@ import "./App.css";
 import { useState } from "react";
 const symptoms = [];
 function App() {
+
+
   function selected(event) {
     const symptomDiv = event.currentTarget;
     symptomDiv.classList.toggle("selected");
+
     const symptomId = symptomDiv.id;
     const index = symptoms.indexOf(symptomId);
+
     if (index > -1) {
       symptoms.splice(index, 1);
     } else {
@@ -14,8 +18,27 @@ function App() {
     }
   }
 
+  function popup1() {
+    const popup = document.getElementById("varient-1");
+    popup.style.display = "block";
+  }
+
+  function popup2() {
+    const popup = document.getElementById("varient-2");
+    popup.style.display = "block";
+  }
+
+  function popup3() {
+    const popup = document.getElementById("varient-3");
+    popup.style.display = "block";
+  }
+
+  function popup4() {
+    const popup = document.getElementById("varient-4");
+    popup.style.display = "block";
+  }
+
   function Think() {
-    // alert("Symptoms selected: " + symptoms);
     let a = 0;
     let b = 0;
     let c = 0;
@@ -25,60 +48,55 @@ function App() {
       const n = Number(x);
       if (n === 1 || n === 2) {
         a++;
-      }
-      else if (n === 3 || n === 4 || n === 5) {
+      } else if (n === 3 || n === 4 || n === 5) {
         b++;
-      }
-      // else if (n === 8 ) {
-      //   a++;
-      // }
-      else if (n >= 6 && n <= 10) {
+      } else if (n >= 6 && n <= 10) {
         c++;
         if (n === 8) {
           a++;
         }
-      }
-      else if (n === 11 || n === 12) {
+      } else if (n === 11 || n === 12) {
         d++;
       }
     }
 
     const max_score = Math.max(a, b, c, d);
 
-    const count = [a, b, c, d].filter(score => score === max_score).length;
+    const count = [a, b, c, d].filter((score) => score === max_score).length;
 
     if (count > 1) {
-      alert("Your have multiple symptoms and based on that we recommend you to try our All Rounder varient D.");
-    }
-    else if (max_score === a) {
-      alert("you should try varient A for tooth decay and caries");
-    }
-    else if (max_score === b) {
-      alert("you should try varient B for gum related issues");
-    }
-    else if (max_score === c) {
-      alert("you should try varient C for sensitivity issues");
-    }
-    else if (max_score === d) {
-      alert("you should try varient D the All Rounder");
+      popup4();
+    } else if (max_score === a) {
+      popup1();
+    } else if (max_score === b) {
+      popup2();
+    } else if (max_score === c) {
+      popup3();
+    } else if (max_score === d) {
+      popup4();
     }
   }
+
   return (
     <>
       <div className="container">
         <div className="header">
-        <img id="herbal-pic" src="/img/herbodent.png" alt="Herbal Toothpaste" />
-        <div className="title">Personalized Dental Care Using AI</div>
+          <img
+            id="herbal-pic"
+            src="/img/herbodent.png"
+            alt="Herbal Toothpaste"
+          />
+          <div className="title">Personalized Dental Care Using AI</div>
         </div>
         <div className="body">
-        <div className="intro">
-          <h2>Welcome to HerboDent 👋 </h2>
-          <p>Where Herbal Care Meets Artificial Intelligence</p>
-        </div>
-        <div className="direction">
-          <h3>Please select your symptoms</h3>
-          <p>Multiple selections are allowed</p>
-        </div>
+          <div className="intro">
+            <h2>Welcome to HerboDent 👋 </h2>
+            <p>Where Herbal Care Meets Artificial Intelligence</p>
+          </div>
+          <div className="direction">
+            <h3>Please select your symptoms</h3>
+            <p>Multiple selections are allowed</p>
+          </div>
           <div className="options">
             <div className="symptoms" id="1" onClick={selected}>
               <img id="toothache" src="/img/toothache.png" alt="" />
@@ -135,113 +153,140 @@ function App() {
           </button>
           <p className="text">no personal data is stored</p>
 
-          <div className="footer">
-            Made by FallendSid
+          <div className="footer">Made by FallendSid</div>
+        </div>
+      </div>
+
+      <div id="varient-1" className="popup">
+        <div className="image">
+          <img src="/img/dental-cavity.jpg" alt="" />
+        </div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name">
+            <h3>Cavity / Tooth decay treatment</h3>
+          </div>
+          <p>
+            Based on your mixed oral symptoms , This herbal toothpaste provides
+            balanced cavity protections, gum care,sensitivity relief, an long
+            lasting freshness.
+          </p>
+          <div className="grids">
+            <div> Protection</div>
+            <div className="danda">|</div>
+            <div>Fights Cavities</div>
+            <div className="danda">|</div>
+            <div>Removes Stains</div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+              <div>Use twice daily</div>
+              <div>Brush for 2 minutes</div>
+              <div>Suitable for daily use</div>
+            </div>
           </div>
         </div>
+        <button className="close-popup">Try Again</button>
+      </div>
+
+      <div id="varient-2" className="popup">
+        <div className="image">
+          <img src="/img/gum-care.jpg" alt="" />
+        </div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name">
+            <h3>Gum Care 🩸</h3>
+          </div>
+          <p>
+            Based on symptoms like bleeding gums and swollen gums, this
+            toothpaste is neigned to reduce inflammation , control bacteria, and
+            improve hum health.
+          </p>
+          <div className="grids">
+            <div> ❗Reduce Inflammation</div>
+            <div className="danda">|</div>
+            <div>🦷 Soothes Gum </div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+              <div>Use twice daily</div>
+              <div>Brush for 2 minutes</div>
+              <div>Suitable for daily use</div>
+            </div>
+          </div>
+        </div>
+        <button className="close-popup">Try Again</button>
+      </div>
+
+      <div id="varient-3" className="popup">
+        <div className="image">
+          <img src="/img/sensitivity.jpg" alt="" />
+        </div>
+        <div className="content">
+          <h2>Your Recommended Toothpaste</h2>
+          <div className="varient-name">
+            <h3>🦷 Sensitivity & Whitening ✨</h3>
+          </div>
+          <p>
+            Based on symptoms like cold sensitivity and yellow teeth, this
+            toothpaste is made to soothe sensitive teeth white gently removing
+            stains for a white smile.
+          </p>
+          <div className="grids">
+            <div>🦷 Sensitive Relief</div>
+            <div className="danda">|</div>
+            <div>✨ Whitens Teeth</div>
+            <div className="danda">|</div>
+            <div>strength</div>
+          </div>
+          <div className="tips">
+            <h3>Usage Tips:</h3>
+            <div className="list">
+              <div>Use twice daily</div>
+              <div>Brush for 2 minutes</div>
+              <div>Suitable for daily use</div>
+            </div>
+          </div>
+        </div>
+        <button className="close-popup">Try Again</button>
       </div>
 
       <div id="varient-4" className="popup">
-        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
+        <div className="image">
+          <img src="/img/overall.jpg" alt="" />
+        </div>
         <div className="content">
           <h2>Your Recommended Toothpaste</h2>
-          <div className="varient-name"><h3>All-Rounder Herbal Toothpaste</h3></div>
-          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
-          <div className="grids">
-            <div>Protection</div>
-            <div>Herbal care</div>
-            <div>Sensivitity Relief</div>
+          <div className="varient-name">
+            <h3>All-Rounder Herbal Toothpaste</h3>
           </div>
+          <p>
+            Based on your mixed oral symptoms , This herbal toothpaste provides
+            balanced cavity protections, gum care,sensitivity relief, an long
+            lasting freshness.
+          </p>
+          <div className="grids">
+            <div>🦷 Protection</div>
+            <div className="danda">|</div>
+            <div>🌿 Herbal Care</div>
+            <div className="danda">|</div>
+            <div>🍃 Fresh Breath</div>
+          </div>
+
           <div className="tips">
             <h3>Usage Tips:</h3>
             <div className="list">
-
-            <div>Use twice daily</div>
-            <div>Brush for 2 minutes</div>
-            <div>Suitable for daily use</div>
+              <div>Use twice daily</div>
+              <div>Brush for 2 minutes</div>
+              <div>Suitable for daily use</div>
             </div>
           </div>
-          <div className="popup-btn">
-            <div className="btn">Try Again</div>
-          </div>
         </div>
+        <button className="close-popup">Try again</button>
       </div>
-      <div id="varient-1" className="popup">
-        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
-        <div className="content">
-          <h2>Your Recommended Toothpaste</h2>
-          <div className="varient-name"><h3>Cavity / Tooth decay treatment</h3></div>
-          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
-          <div className="grids">
-            <div>Protection</div>
-            <div>Herbal care</div>
-            <div>Sensivitity Relief</div>
-          </div>
-          <div className="tips">
-            <h3>Usage Tips:</h3>
-            <div className="list">
-
-            <div>Use twice daily</div>
-            <div>Brush for 2 minutes</div>
-            <div>Suitable for daily use</div>
-            </div>
-          </div>
-          <div className="popup-btn">
-            <div className="btn">Try Again</div>
-          </div>
-        </div>
-      </div>
-      <div id="varient-2" className="popup">
-        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
-        <div className="content">
-          <h2>Your Recommended Toothpaste</h2>
-          <div className="varient-name"><h3>Gum problem toothpaste</h3></div>
-          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
-          <div className="grids">
-            <div>Protection</div>
-            <div>Herbal care</div>
-            <div>Sensivitity Relief</div>
-          </div>
-          <div className="tips">
-            <h3>Usage Tips:</h3>
-            <div className="list">
-
-            <div>Use twice daily</div>
-            <div>Brush for 2 minutes</div>
-            <div>Suitable for daily use</div>
-            </div>
-          </div>
-          <div className="popup-btn">
-            <div className="btn">Try Again</div>
-          </div>
-        </div>
-      </div>
-      <div id="varient-3" className="popup">
-        <div className="image"><img id="success" src="/img/success.jpg" alt="" /></div>
-        <div className="content">
-          <h2>Your Recommended Toothpaste</h2>
-          <div className="varient-name"><h3>Sensitivity and whitening</h3></div>
-          <p>Based on your mixed oral symptoms , This herbal toothpaste provides balanced cavity protections, gum care,sensitivity relief, an long lasting freshness.</p>
-          <div className="grids">
-            <div>Protection</div>
-            <div>Herbal care</div>
-            <div>Sensivitity Relief</div>
-          </div>
-          <div className="tips">
-            <h3>Usage Tips:</h3>
-            <div className="list">
-
-            <div>Use twice daily</div>
-            <div>Brush for 2 minutes</div>
-            <div>Suitable for daily use</div>
-            </div>
-          </div>
-          <div className="popup-btn">
-            <div className="btn">Try Again</div>
-          </div>
-        </div>
-      </div>
-
     </>
   );
 }

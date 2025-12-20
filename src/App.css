@@ -140,18 +140,19 @@ body{
 
 
 
-#success{
-  width: 50px;
-  height: 50px; 
+.popup .image img{
+  width: 60px;
+  height: 60px; 
   border-radius: 30px;
-  margin-top: 10px;
-  /* margin-left: calc(50% - 25px); */
+  margin-top: 20px;
+  border: 2px solid rgba(210, 210, 210, 0.508);
 }
 .popup{
+  z-index: 10;
   position: fixed;
   top: 10%;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   justify-self: center;
 
 
@@ -169,14 +170,15 @@ body{
   margin-top: 20px;
   color: black;
   font-weight: bolder;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .varient-name , .tips{
   background-color:rgba(0, 255, 0, 0.404);
   text-align: center;
-  width: 90%;
+  width: fit-content;
   margin: auto;
+  padding: 0 8px 0 8px;
   border-radius:16px ;
 }
 
@@ -186,32 +188,70 @@ body{
 
 .content p{
   text-align: start;
+  margin: 15px;
   padding: 5px;
 }
-
+.danda{
+  opacity: 0.3;
+}
 .grids{
-  display:flex;
-  gap: 20px;
+  display: flex;
+  width: 95%;
+  margin: auto;
+  gap: 10px;;
   justify-content: center;
+}
+
+.tips{
+  margin: 15px;
+  width: fit-content;
+  padding: 10px;
+  line-height: 4px;
+}
+
+.tips h3{
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  text-align: start;
 }
 .list{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 10px;
-  line-height: 10px;
 }
-
-.popup-btn .btn{
+.close-popup{
   margin: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-self:center ;
+}
 
+#varient-4 .content .varient-name , #varient-4 .content .tips{
+  background-color:rgba(17, 231, 46, 0.419);
+}
+#varient-4{
+  display: none;
+}
+
+#varient-3 .content .varient-name , #varient-3 .content .tips{
+  background-color:rgba(0, 187, 255, 0.205);
+}
+#varient-3{
+  display: none;
+}
+
+#varient-2 .content .varient-name , #varient-2 .content .tips{
+  background-color:rgba(255, 0, 0, 0.205);}
+
+#varient-2{
+  display: none;
 }
 
 
-#varient-1, #varient-2, #varient-3 , #varient-4{
+#varient-1 .content .varient-name , #varient-1 .content .tips{
+  background-color:rgba(245, 255, 51, 0.512);}
+#varient-1{
   display: none;
 }
