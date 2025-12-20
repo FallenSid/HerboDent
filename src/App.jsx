@@ -1,8 +1,8 @@
 import "./App.css";
-import { useState } from "react";
+import { useState , useRef , useEffect} from "react";
 const symptoms = [];
 function App() {
-
+  
 
   function selected(event) {
     const symptomDiv = event.currentTarget;
@@ -17,6 +17,17 @@ function App() {
       symptoms.push(symptomId);
     }
   }
+
+  function deSelect(){
+    // const selectedDiv = document.getElementsByClassName('selected');
+    // for(const div of selectedDiv){
+    //   div.classList.remove("selected")
+    // }
+
+    document.querySelectorAll('.selected').forEach(div => div.classList.remove('selected'));
+
+  }
+
 
   function popup1() {
     const popup = document.getElementById("varient-1");
@@ -76,6 +87,12 @@ function App() {
       popup4();
     }
   }
+
+
+  const v1 = useRef(null);
+  const v2 = useRef(null);
+  const v3 = useRef(null);
+  const v4 = useRef(null);
 
   return (
     <>
@@ -157,7 +174,14 @@ function App() {
         </div>
       </div>
 
-      <div id="varient-1" className="popup">
+
+
+
+
+
+
+
+      <div id="varient-1" className="popup" ref={v1}>
         <div className="image">
           <img src="/img/dental-cavity.jpg" alt="" />
         </div>
@@ -187,10 +211,10 @@ function App() {
             </div>
           </div>
         </div>
-        <button className="close-popup">Try Again</button>
+        <button className="close-popup" onClick={()=>{v1.current.style.display='none';deSelect()}} >Try Again</button>
       </div>
 
-      <div id="varient-2" className="popup">
+      <div id="varient-2" className="popup" ref={v2}>
         <div className="image">
           <img src="/img/gum-care.jpg" alt="" />
         </div>
@@ -218,10 +242,13 @@ function App() {
             </div>
           </div>
         </div>
-        <button className="close-popup">Try Again</button>
+        <button className="close-popup" onClick={()=>{
+          v2.current.style.display='none';
+          deSelect()
+        }} >Try Again</button>
       </div>
 
-      <div id="varient-3" className="popup">
+      <div id="varient-3" className="popup" ref={v3}>
         <div className="image">
           <img src="/img/sensitivity.jpg" alt="" />
         </div>
@@ -251,10 +278,10 @@ function App() {
             </div>
           </div>
         </div>
-        <button className="close-popup">Try Again</button>
+        <button className="close-popup" onClick={()=>{v3.current.style.display='none';deSelect()}}>Try Again</button>
       </div>
 
-      <div id="varient-4" className="popup">
+      <div id="varient-4" className="popup" ref={v4}>
         <div className="image">
           <img src="/img/overall.jpg" alt="" />
         </div>
@@ -285,7 +312,7 @@ function App() {
             </div>
           </div>
         </div>
-        <button className="close-popup">Try again</button>
+        <button className="close-popup" onClick={()=>{v4.current.style.display='none';deSelect()}}>Try again</button>
       </div>
     </>
   );

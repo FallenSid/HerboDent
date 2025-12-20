@@ -255,3 +255,10 @@ body{
 #varient-1{
   display: none;
 }
+
+.close-popup{
+  width: 30%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(238, 238, 238, 0.696);
+}
