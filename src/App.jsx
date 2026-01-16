@@ -92,7 +92,7 @@ function App() {
         <div className="header">
           <img
             id="herbal-pic"
-            src="/img/herbodent.png"
+            src="/img/header.png"
             alt="Herbal Toothpaste"
           />
           <div className="title">Personalized Dental Care Using AI</div>
@@ -175,12 +175,12 @@ function App() {
 
       <div id="varient-1" className="popup" ref={v1}>
         <div className="image">
-          <img src="/img/dental-cavity.jpg" alt="" />
+          <img src="/img/30.jpg" alt="" />
         </div>
         <div className="content">
           <h2>Your Recommended Toothpaste</h2>
           <div className="varient-name">
-            <h3>Cavity / Tooth decay treatment</h3>
+            <h3>Dental Care</h3>
           </div>
           <p>
             Based on your mixed oral symptoms , This herbal toothpaste provides
@@ -208,7 +208,7 @@ function App() {
 
       <div id="varient-3" className="popup" ref={v3}>
         <div className="image">
-          <img src="/img/sensitivity.jpg" alt="" />
+          <img src="/img/20.jpg" alt="" />
         </div>
         <div className="content">
           <h2>Your Recommended Toothpaste</h2>
@@ -241,7 +241,7 @@ function App() {
 
       <div id="varient-4" className="popup" ref={v4}>
         <div className="image">
-          <img src="/img/overall.jpg" alt="" />
+          <img src="/img/10.jpg" alt="" />
         </div>
         <div className="content">
           <h2>Your Recommended Toothpaste</h2>
